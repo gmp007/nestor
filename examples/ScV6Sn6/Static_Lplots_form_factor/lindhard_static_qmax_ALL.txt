@@ -1,0 +1,45 @@
+
+========================================================================
+Peak summary: STATIC_TOTAL_3D
+q* (qx_star, qy_star) is the location of the GLOBAL maximum of the map for the given component,
+with the Γ (q=0) row/column excluded to avoid the trivial singularity/peak at the origin.
+Coordinates are given in FRACTIONAL reciprocal units on the grid q ∈ [-0.5, 0.5]×[-0.5, 0.5].
+Components:
+  • real : Re[χ(q)] after optional peak-blend/mask processing (see code comment PEAK_MODE).
+  • imag : Im[χ(q)].
+  • abs  : |χ(q)|.
+
+Peaks:
+  • real: q* = (-0.153061, 0.153061), peak_value = 2.29690725e+00
+  • imag: q* = (0.153061, -0.153061), peak_value = 1.39915591e+00
+  •  abs: q* = (-0.153061, 0.132653), peak_value = 2.43191432e+00
+
+========================================================================
+Peak summary: STATIC_INTRA_3D
+q* (qx_star, qy_star) is the location of the GLOBAL maximum of the map for the given component,
+with the Γ (q=0) row/column excluded to avoid the trivial singularity/peak at the origin.
+Coordinates are given in FRACTIONAL reciprocal units on the grid q ∈ [-0.5, 0.5]×[-0.5, 0.5].
+Components:
+  • real : Re[χ(q)] after optional peak-blend/mask processing (see code comment PEAK_MODE).
+  • imag : Im[χ(q)].
+  • abs  : |χ(q)|.
+
+Peaks:
+  • real: q* = (-0.153061, 0.153061), peak_value = 2.29690604e+00
+  • imag: q* = (0.153061, -0.153061), peak_value = 1.39915589e+00
+  •  abs: q* = (-0.153061, 0.132653), peak_value = 2.43191316e+00
+
+========================================================================
+Peak summary: STATIC_INTER_3D
+q* (qx_star, qy_star) is the location of the GLOBAL maximum of the map for the given component,
+with the Γ (q=0) row/column excluded to avoid the trivial singularity/peak at the origin.
+Coordinates are given in FRACTIONAL reciprocal units on the grid q ∈ [-0.5, 0.5]×[-0.5, 0.5].
+Components:
+  • real : Re[χ(q)] after optional peak-blend/mask processing (see code comment PEAK_MODE).
+  • imag : Im[χ(q)].
+  • abs  : |χ(q)|.
+
+Peaks:
+  • real: q* = (0.010204, -0.132653), peak_value = 1.31292219e-06
+  • imag: q* = (-0.030612, 0.153061), peak_value = 1.79553395e-07
+  •  abs: q* = (0.010204, -0.132653), peak_value = 1.31356264e-06
