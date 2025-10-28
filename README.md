@@ -585,6 +585,9 @@ You may also cite the repository directly:
 **Chinedu Ekuma** — Department of Physics, Lehigh University, Bethlehem PA, USA  
 📧 cekuma1@gmail.com  |  che218@lehigh.edu  
 
+**Chidiebere I. Nwaogbo** — Department of Physics, Lehigh University, Bethlehem, PA, USA  
+📧 cin221@lehigh.edu | chidieberenwaogbo@gmail.com 
+
 **Contributors:** Chinedu Ekuma, Chidiebere Nwaogbo  
 
 
