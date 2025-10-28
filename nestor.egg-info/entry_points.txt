@@ -1,0 +1,2 @@
+[console_scripts]
+nestor = lindhardkit.__main__:main

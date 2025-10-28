@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: lindhardkit
+Version: 0.1.0
+Summary: Lindhard susceptibility + EF-JDOS toolkit with optional wavefunction form factors
+Home-page: https://physics.lehigh.edu/~cekuma
+Author: Chinedu E. Ekuma
+Author-email: cekuma@lehigh.edu
+License: MIT
+Project-URL: Source, https://example.com/lindhardkit
+Project-URL: Issues, https://example.com/lindhardkit/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE

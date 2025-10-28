@@ -1,0 +1,33 @@
+
+========================================================================
+Peak summary: STATIC_TOTAL_3D
+q* (qx_star, qy_star) is the GLOBAL maximum on the 2D map, excluding Γ row/col.
+Coordinates are fractional reciprocal units on q ∈ [-0.5, 0.5] × [-0.5, 0.5].
+Components: real=Re[χ], imag=Im[χ], abs=|χ|.
+
+Peaks:
+  • real: q* = (0.397959, 0.295918), peak_value = 2.46679115e-01
+  • imag: q* = (-0.091837, -0.091837), peak_value = 6.53346946e-03
+  •  abs: q* = (0.397959, 0.295918), peak_value = 2.46684432e-01
+
+========================================================================
+Peak summary: STATIC_INTRA_3D
+q* (qx_star, qy_star) is the GLOBAL maximum on the 2D map, excluding Γ row/col.
+Coordinates are fractional reciprocal units on q ∈ [-0.5, 0.5] × [-0.5, 0.5].
+Components: real=Re[χ], imag=Im[χ], abs=|χ|.
+
+Peaks:
+  • real: q* = (0.397959, 0.295918), peak_value = 2.46679115e-01
+  • imag: q* = (-0.091837, -0.091837), peak_value = 6.53346991e-03
+  •  abs: q* = (0.397959, 0.295918), peak_value = 2.46684432e-01
+
+========================================================================
+Peak summary: STATIC_INTER_3D
+q* (qx_star, qy_star) is the GLOBAL maximum on the 2D map, excluding Γ row/col.
+Coordinates are fractional reciprocal units on q ∈ [-0.5, 0.5] × [-0.5, 0.5].
+Components: real=Re[χ], imag=Im[χ], abs=|χ|.
+
+Peaks:
+  • real: q* = (-0.091837, -0.397959), peak_value = 5.55192993e-09
+  • imag: q* = (-0.051020, 0.030612), peak_value = 4.95563895e-09
+  •  abs: q* = (-0.091837, -0.397959), peak_value = 5.55192993e-09

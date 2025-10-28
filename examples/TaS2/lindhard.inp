@@ -1,0 +1,24 @@
+### Input Configuration File (`lindhard.txt`)
+[LINDHARD]
+code = VASP                     
+struct_file = POSCAR 		
+dim = 2              		
+eigenval = EIGENVAL
+num_qpoints = 50                
+eta = 0.01
+interpolate = false
+output_prefix = lindhard_output
+points_per_segment = 100
+hsp_file = KPOINTS.hsp
+nprocs = 8
+include_ff = false
+#window_ev = 0.3
+#jdos = true
+jdos_offsets_ev = -0.1,0,0.1
+write-peak = true
+#smooth_peaks =true	
+#Dynamic run
+#dynamic = true
+omega_min = 0.0
+omega_max = 1.0
+num_omegas = 200

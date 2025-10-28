@@ -1,0 +1,5 @@
+# Modify to match the k-point grid used in your DFT calculation
+0
+Gamma
+   5   5   1
+0.0  0.0  0.0
