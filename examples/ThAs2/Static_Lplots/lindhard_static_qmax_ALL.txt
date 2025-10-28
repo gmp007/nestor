@@ -1,0 +1,30 @@
+
+========================================================================
+Peak summary: STATIC_TOTAL_3D
+q* (qx_star, qy_star) is the location of the GLOBAL maximum of the map for the given component,
+with the Γ (q=0) row/column excluded to avoid the trivial singularity/peak at the origin.
+Coordinates are given in FRACTIONAL reciprocal units on the grid q ∈ [-0.5, 0.5]×[-0.5, 0.5].
+Components:
+  • real : Re[χ(q)] after optional peak-blend/mask processing (see code comment PEAK_MODE).
+  • imag : Im[χ(q)].
+  • abs  : |χ(q)|.
+
+Peaks:
+  • real: q* = (-0.146465, 0.146465), peak_value = 2.22983068e+02
+  • imag: q* = (0.257576, -0.378788), peak_value = 2.27981336e+00
+  •  abs: q* = (-0.146465, 0.146465), peak_value = 2.22990041e+02
+
+========================================================================
+Peak summary: STATIC_TOTAL_3D
+q* (qx_star, qy_star) is the location of the GLOBAL maximum of the map for the given component,
+with the Γ (q=0) row/column excluded to avoid the trivial singularity/peak at the origin.
+Coordinates are given in FRACTIONAL reciprocal units on the grid q ∈ [-0.5, 0.5]×[-0.5, 0.5].
+Components:
+  • real : Re[χ(q)] after optional peak-blend/mask processing (see code comment PEAK_MODE).
+  • imag : Im[χ(q)].
+  • abs  : |χ(q)|.
+
+Peaks:
+  • real: q* = (-0.146465, 0.146465), peak_value = 2.22983068e+02
+  • imag: q* = (0.257576, -0.378788), peak_value = 2.27981336e+00
+  •  abs: q* = (-0.146465, 0.146465), peak_value = 2.22990041e+02
