@@ -1,0 +1,88 @@
+2025-10-22 14:13:03,118 | INFO | lindhardkit: [window] Using single smart window: ±1.000 eV (T=0.0 K, eta=0.01 eV, ff=False)
+2025-10-22 14:13:03      INFO: ══════════════════════════════════════════════════════════════════════
+2025-10-22 14:13:03      INFO:  Starting CDW Lindhard Susceptibility Calculation 
+2025-10-22 14:13:03      INFO: ══════════════════════════════════════════════════════════════════════
+2025-10-22 14:13:03      INFO:  Author     : Prof. Chinedu E. Ekuma
+2025-10-22 14:13:03      INFO:  Affiliation: Lehigh University, Bethlehem PA 18015
+2025-10-22 14:13:03      INFO:  Contact    : cekuma@lehigh.edu
+2025-10-22 14:13:03      INFO:  Homepage   : https://physics.lehigh.edu/~cekuma
+2025-10-22 14:13:03      INFO: 
+2025-10-22 14:13:03      INFO:  If you have used this code in your calculations, please cite:
+2025-10-22 14:13:03      INFO:     Ekuma, C. E., *et al.* "Title of Article." Journal Name, Year.
+2025-10-22 14:13:03      INFO:     DOI: xx.xxxx/xxxxxxx
+2025-10-22 14:13:03      INFO: ══════════════════════════════════════════════════════════════════════
+2025-10-22 14:13:03      INFO: Run Timestamp : Wed 2025-10-22 14:13:03
+2025-10-22 14:13:03      INFO:   ↳ parsed 5 k-points × 17 bands  (spin=1)
+2025-10-22 14:13:03      INFO: Energies range: -62.457 to 3.039 eV
+2025-10-22 14:13:03      INFO: Occupations info: min=0.0, max=1.0, unique_count=2
+2025-10-22 14:13:03      INFO: ────────────────────────────────────────────────────────────
+2025-10-22 14:13:03      INFO:                 Parsed inputs / CLI options:                
+2025-10-22 14:13:03      INFO: ------------------------------------------------------------
+2025-10-22 14:13:03      INFO:              auto_saddle = True
+2025-10-22 14:13:03      INFO:           band_window_ev = 1.0
+2025-10-22 14:13:03      INFO:          blend_width_pts = 4
+2025-10-22 14:13:03      INFO:                     code = VASP
+2025-10-22 14:13:03      INFO:               delta_e_sp = auto
+2025-10-22 14:13:03      INFO:                      dim = 2
+2025-10-22 14:13:03      INFO:                  dynamic = False
+2025-10-22 14:13:03      INFO:                 eigenval = EIGENVAL
+2025-10-22 14:13:03      INFO:     energy_window_sigmas = 4.0
+2025-10-22 14:13:03      INFO:                      eta = 0.01
+2025-10-22 14:13:03      INFO:                ev_window = None
+2025-10-22 14:13:03      INFO:            fermi_surface = False
+2025-10-22 14:13:03      INFO:                 hsp_file = KPOINTS.hsp
+2025-10-22 14:13:03      INFO:               include_ff = False
+2025-10-22 14:13:03      INFO:               input_file = lindhard.inp
+2025-10-22 14:13:03      INFO:              interpolate = False
+2025-10-22 14:13:03      INFO:     interpolation_points = 200
+2025-10-22 14:13:03      INFO:                     jdos = False
+2025-10-22 14:13:03      INFO:          jdos_offsets_ev = 0.0
+2025-10-22 14:13:03      INFO:             jdos_thermal = False
+2025-10-22 14:13:03      INFO:            make_template = False
+2025-10-22 14:13:03      INFO:              mu_override = None
+2025-10-22 14:13:03      INFO:                   nprocs = 8
+2025-10-22 14:13:03      INFO:               num_omegas = 50
+2025-10-22 14:13:03      INFO:              num_qpoints = 100
+2025-10-22 14:13:03      INFO:               occ_source = dft
+2025-10-22 14:13:03      INFO:                omega_max = 1.0
+2025-10-22 14:13:03      INFO:                omega_min = 0.0
+2025-10-22 14:13:03      INFO:            output_prefix = lindhard
+2025-10-22 14:13:03      INFO:                peak_mode = blend
+2025-10-22 14:13:03      INFO:          peak_radius_pts = 1
+2025-10-22 14:13:03      INFO:       points_per_segment = 50
+2025-10-22 14:13:03      INFO:                    quiet = False
+2025-10-22 14:13:03      INFO:              saddlepoint = False
+2025-10-22 14:13:03      INFO:        selected_q_labels = []
+2025-10-22 14:13:03      INFO:             smooth_sigma = 3.0
+2025-10-22 14:13:03      INFO:              struct_file = POSCAR
+2025-10-22 14:13:03      INFO:              temperature = 0.0
+2025-10-22 14:13:03      INFO:                 template = False
+2025-10-22 14:13:03      INFO:                  wavefxn = WAVECAR
+2025-10-22 14:13:03      INFO:                window_ev = 1.0
+2025-10-22 14:13:03      INFO: ────────────────────────────────────────────────────────────
+2025-10-22 14:13:03      INFO: Area  : 8.618 Å²  =  8.61806e-20 m²
+2025-10-22 14:13:03      INFO: The Fermi energy in [eV] is -1.4669
+2025-10-22 14:13:03      INFO: Using chemical potential μ = -1.4669 eV  (temperature T = 0.00 K)
+2025-10-22 14:13:03      INFO: Electron density n = 3.0169e+20 m^{-2}
+2025-10-22 14:13:03      INFO: Computing static χ(q) with intra/inter/total …
+2025-10-22 14:15:13      INFO: Static χ(q) grid computation (TOTAL) completed.
+2025-10-22 14:15:13      INFO: [qmax/real] argmax excluding Γ at q* = (-0.5000, -0.5000); peak = 23.8668
+2025-10-22 14:15:13      INFO: [qmax/imag] argmax excluding Γ at q* = (-0.2980, 0.2980); peak = 0.0019152
+2025-10-22 14:15:13      INFO: [qmax/abs] argmax excluding Γ at q* = (-0.5000, -0.5000); peak = 23.8668
+2025-10-22 14:15:56      INFO: [qmax/real] argmax excluding Γ at q* = (-0.5000, -0.5000); peak = 23.8668
+2025-10-22 14:15:56      INFO: [qmax/imag] argmax excluding Γ at q* = (-0.2980, 0.2980); peak = 0.0019152
+2025-10-22 14:15:56      INFO: [qmax/abs] argmax excluding Γ at q* = (-0.5000, -0.5000); peak = 23.8668
+2025-10-22 14:16:27      INFO: Computing Lindhard susceptibility along high-symmetry path…
+2025-10-22 14:16:35      INFO: Saved lindhard_static_TOTAL_abs_3d.png → Static_Lplots
+2025-10-22 14:16:35      INFO: Saved lindhard_static_TOTAL_imag.png → Static_Lplots
+2025-10-22 14:16:35      INFO: Saved lindhard_static_TOTAL_real.png → Static_Lplots
+2025-10-22 14:16:35      INFO: Saved lindhard_static_TOTAL_abs.png → Static_Lplots
+2025-10-22 14:16:35      INFO: Saved lindhard_static_TOTAL_real_3d.png → Static_Lplots
+2025-10-22 14:16:35      INFO: Saved lindhard_static_TOTAL_imag_3d.png → Static_Lplots
+2025-10-22 14:16:35      INFO: Saved lindhard_path_TOTAL_real.png → Static_Lplots
+2025-10-22 14:16:35      INFO: Saved lindhard_static_TOTAL_abs.csv → Static_Lplots
+2025-10-22 14:16:35      INFO: Saved lindhard_static_TOTAL_imag.csv → Static_Lplots
+2025-10-22 14:16:35      INFO: Saved lindhard_static_TOTAL_real.csv → Static_Lplots
+2025-10-22 14:16:35      INFO: Saved lindhard_path_TOTAL.csv → Static_Lplots
+2025-10-22 14:16:35      INFO: Saved lindhard_static_qmax_ALL.txt → Static_Lplots
+2025-10-22 14:16:35      INFO: ==== Run finished – total wall time 212.8 s (3.5 min) ====
