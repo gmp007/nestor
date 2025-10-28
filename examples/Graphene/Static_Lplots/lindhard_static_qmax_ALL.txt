@@ -1,0 +1,15 @@
+
+========================================================================
+Peak summary: STATIC_TOTAL_3D
+q* (qx_star, qy_star) is the location of the GLOBAL maximum of the map for the given component,
+with the Γ (q=0) row/column excluded to avoid the trivial singularity/peak at the origin.
+Coordinates are given in FRACTIONAL reciprocal units on the grid q ∈ [-0.5, 0.5]×[-0.5, 0.5].
+Components:
+  • real : Re[χ(q)] after optional peak-blend/mask processing (see code comment PEAK_MODE).
+  • imag : Im[χ(q)].
+  • abs  : |χ(q)|.
+
+Peaks:
+  • real: q* = (-0.500000, -0.500000), peak_value = 8.04571029e+00
+  • imag: q* = (-0.025253, 0.025253), peak_value = 2.70886709e+00
+  •  abs: q* = (-0.500000, -0.500000), peak_value = 8.04571029e+00
