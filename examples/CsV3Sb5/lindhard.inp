@@ -1,0 +1,46 @@
+# lindhard.inp — edit values in the [LINDHARD] section
+[LINDHARD]
+code = VASP                 # VASP | QE | ABINIT
+struct_file = POSCAR        # POSCAR / CIF / QE input (optional but recommended)
+dim = 2                     # 2 or 3
+
+eigenval = EIGENVAL         # VASP EIGENVAL  (QE: use the reader for bands)
+wavefxn  = WAVECAR          # VASP WAVECAR   (QE: prefix for <prefix>.save/)
+
+num_qpoints = 50           # q-grid along each axis (uniform −0.5..0.5)
+eta = 0.01                  # eV broadening
+output_prefix = lindhard    # output stem
+
+include_ff = false          # include |⟨nk|e^{iq·r}|mk+q⟩|² (needs WAVECAR / wfc)
+window_ev  = 1.0               # half-window (eV) around E_F for WAVECAR/wfc reads
+
+interpolate = false
+interpolation_points = 200
+
+dynamic = false
+omega_min = 0.0
+omega_max = 1.0
+num_omegas = 50
+selected_q_labels =         # comma list of HSP labels for dynamic plots
+
+hsp_file = KPOINTS.hsp
+points_per_segment = 100
+
+# Saddle-point / JDOS options
+saddlepoint = false
+auto_saddle = true
+delta_e_sp = auto
+
+jdos = true
+jdos_thermal = false
+jdos_offsets_ev = 0.5
+energy_window_sigmas = 4.0
+band_window_ev = 1.0
+
+# Occupations / temperature control
+temperature = 94           # K
+occ_source = dft            # dft | fermi
+mu =                        # optional μ override (eV)
+
+# Parallelism
+nprocs = 8
