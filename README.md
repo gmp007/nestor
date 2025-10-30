@@ -182,7 +182,7 @@ pip install -e .
 ### Static (\chi(\mathbf{q})), VASP
 
 ```bash
-nestor \
+nestors \
   --code VASP \
   --eigenval ./EIGENVAL \
   --dim 2 \
@@ -193,7 +193,7 @@ nestor \
 ### Static (\chi(\mathbf{q})), QE
 
 ```bash
-nestor \
+nestors \
   --code QE \
   --wavefxn si      # uses si.save/
   --dim 3 \
@@ -204,7 +204,7 @@ nestor \
 ### EF-JDOS (nesting), VASP
 
 ```bash
-nestor \
+nestors \
   --code VASP \
   --eigenval ./EIGENVAL \
   --jdos \
@@ -216,7 +216,7 @@ nestor \
 ### Dynamic (\chi(\mathbf{q},\omega)) with selected path labels
 
 ```bash
-nestor \
+nestors \
   --code QE \
   --wavefxn si \
   --dynamic --omega_min 0.0 --omega_max 0.5 --num_omegas 200 \
@@ -227,7 +227,7 @@ nestor \
 ### With form factors (needs wavefunctions)
 
 ```bash
-nestor \
+nestors \
   --code VASP \
   --eigenval ./EIGENVAL \
   --wavefxn ./WAVECAR \
@@ -476,10 +476,10 @@ All files are prefixed by `--output_prefix` (default: `lindhard`).
 
 ## Examples
 
-### 1) VASP, static (\chi) with smart window
+### 1) VASP, static (\chi)
 
 ```bash
- nestor \
+ nestors \
   --code VASP \
   --eigenval EIGENVAL \
   --dim 2 \
@@ -494,7 +494,7 @@ If `--ev_window` is omitted, it will be set by (\max(4k_BT,\ \text{energy_window
 ### 2) QE, EF-JDOS with thermal window
 
 ```bash
-nestor \
+nestors \
   --code QE \
   --wavefxn si \
   --dim 3 \
@@ -508,7 +508,7 @@ nestor \
 ### 3) VASP, dynamic (\chi) on path with form factors
 
 ```bash
-nestor \
+nestors \
   --code VASP \
   --eigenval EIGENVAL \
   --wavefxn WAVECAR \
@@ -523,7 +523,7 @@ nestor \
 ### 4) Saddle-point shifted reference (auto-Δ)
 
 ```bash
-nestor \
+nestors \
   --code VASP --dim 2 \
   --eigenval EIGENVAL --struct_file POSCAR \
   --num_qpoints 101 --eta 0.02 \
@@ -535,7 +535,7 @@ nestor \
 ### 5) With form factors (QE; pass the **prefix**, not the .save path)
 
 ```bash
-nestor \
+nestors \
   --code QE \
   --dim 3 \
   --eigenval ./calc/data-file-schema.xml \
@@ -551,7 +551,7 @@ nestor \
 ### 6) Using an INI and overriding a couple flags
 
 ```bash
-nestor --input_file lindhard.inp --num_qpoints 96 --eta 0.03
+nestors --input_file lindhard.inp --num_qpoints 96 --eta 0.03
 ```
 
 > Speed tips: add `-j 8` to use 8 processes; add `--quiet` to hide progress bars.
