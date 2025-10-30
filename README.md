@@ -14,7 +14,7 @@ The toolkit enables **form-factor-resolved** decomposition (TOTAL / INTRA / INTE
 
 ### Core Capabilities
 
-- 🧩 Compute both **static** (`χ(q, 0)`) and **dynamic** (`χ(q, ω → 0)`) susceptibilities on uniform 2D/3D **q-grids**, with **finite-T** smearing and **η-broadening**.
+- 🧩 Compute both **static** (`χ(q, 0)`) and **dynamic** (`χ(q, ω)`) susceptibilities on uniform 2D/3D **q-grids**, with **finite-T** smearing and **η-broadening**.
 - ⚛️ Include **band-resolved form factors**  
   \(|⟨ψ_{k+q}| e^{i q·r} |ψ_k⟩|²\) from **VASP (WAVECAR)** or **QE (wfc*.dat)** with INTRA/INTER separation
 - 🧮 Extract χ(q) along **high-symmetry paths**
