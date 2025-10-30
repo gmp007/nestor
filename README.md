@@ -110,44 +110,6 @@ Run a **dense NSCF** to produce `EIGENVAL` (and `WAVECAR` if form factors are re
 
 Pass the QE **prefix** via `--wavefxn si` to refer to `si.save/` (do **not** include `.save`). If omitted, the first `*.save/` in the working directory is used.
 
-
----
-## Theory (short)
-
-### Lindhard susceptibility
-
-\[
-\chi(\mathbf{q},\omega)
-= -\frac{e^{2}}{V_d}\sum_{\mathbf{k},n,m}\sum_{s}
-\frac{f_{n\mathbf{k}s}-f_{m,\mathbf{k}+\mathbf{q},s}}
-{\varepsilon_{n\mathbf{k}s}-\varepsilon_{m,\mathbf{k}+\mathbf{q},s}+\hbar\omega+i\eta}
-\;\big|\! \langle \psi_{n\mathbf{k}s} \,|\, e^{i\mathbf{q}\cdot\mathbf{r}} \,|\, \psi_{m,\mathbf{k}+\mathbf{q},s}\rangle \!\big|^{2}_{\;\text{(optional)}}
-\]
-
-* **Prefactor & sign:** the code uses \(-e^2/V_d\), where \(V_d\) is **area** (2D) or **volume** (3D).
-* **Spin:** the code **sums over spin** \(s\). There is **no fixed factor 2**; non-spin-polarized cases effectively yield a factor ≈2 via the spin sum.
-* **Occupations \(f\):** from file **or** Fermi–Dirac \(f(\varepsilon;\mu,T)\) using the global \(E_F\) and \(T\).
-* **Broadening:** \(\eta\) is a small positive broadening (in eV); \(\omega=0\) gives the **static** limit.
-* **Form-factor (optional):** if enabled, the plane-wave matrix element
-  \(|\langle \psi|e^{i\mathbf{q}\cdot\mathbf{r}}|\psi\rangle|^{2}\) is included; otherwise it is effectively set to 1.
-
-### EF-JDOS / nesting function
-
-\[
-\xi(\mathbf{q})
-\;\propto\;
-\sum_{\mathbf{k},n,m}
-\,w\!\big(\varepsilon_{n\mathbf{k}}-\mu\big)\;
-w\!\big(\mu-\varepsilon_{m,\mathbf{k}+\mathbf{q}}\big)
-\;\;\Big[\times\; \big|\langle \psi_{n\mathbf{k}}|e^{i\mathbf{q}\cdot\mathbf{r}}|\psi_{m,\mathbf{k}+\mathbf{q}}\rangle\big|^{2}\Big]_{\text{(optional)}}
-\]
-
-with window choices:
-* **Thermal:** \(w(E)= -\partial f/\partial E\) at \((\mu,T)\) (enabled via `--jdos_thermal`).
-* **Gaussian:** \(w(E)=\exp[-E^{2}/(2\sigma^{2})]\) with \(\sigma \sim \eta\) (tunable).
-* **Constant-energy JDOS:** the code also supports \(E=\mu+\Delta\) slices (e.g., \(\Delta=0,\pm\)meV).
-
-*Notes:* \(\mu\) is the Fermi level; optional overlap weighting uses the same plane-wave matrix element as in \(\chi\). Normalization constants are handled internally for plotting/export.
 ---
 
 
