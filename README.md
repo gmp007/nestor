@@ -1,6 +1,6 @@
 # 🌀 NESTOR: Nesting & Electronic Susceptibility Toolkit for Ordered Responses
 
-[[!GitHub](https://github.com/gmp007/nestor)](https://github.com/gmp007/nestor)
+[[GitHub](https://github.com/gmp007/nestor)](https://github.com/gmp007/nestor)
 
 **NESTOR** is a unified, Python-based framework for computing and analyzing the **electronic susceptibility** (Lindhard χ) and **Fermi-surface nesting** functions (EF-JDOS) in crystalline materials.  
 It bridges **first-principles DFT data** from **VASP** and **Quantum ESPRESSO (QE)** to reveal charge-density-wave (CDW), spin-density-wave (SDW), and van-Hove–related instabilities.
@@ -52,7 +52,7 @@ The toolkit enables **form-factor-resolved** decomposition (TOTAL / INTRA / INTE
 
 * **VASP or QE** band structures and (optionally) wavefunctions
 * **2D or 3D** systems with correct **area/volume** normalization
-* **Static and dynamic** (\chi(\mathbf{q},\omega)) with configurable (\omega)-grid
+* **Static and dynamic** $\chi(\mathbf{q},\omega)$ with configurable $\omega$-grid
 * **EF-JDOS / nesting** with either **Gaussian** or **thermal** windows
 * **Form factors** (on/off) multiplying the Lindhard kernel (requires WAVECAR or QE `.save/` wavefunctions)
 * **High-symmetry path** and **uniform q-grid** support
@@ -66,25 +66,25 @@ The toolkit enables **form-factor-resolved** decomposition (TOTAL / INTRA / INTE
 
 ### Lindhard susceptibility
 
-[
+$$
 \chi(\mathbf{q},\omega) = \frac{2}{V}\sum_{\mathbf{k},n,m}
 \frac{f_{n\mathbf{k}}-f_{m\mathbf{k+q}}}{\epsilon_{n\mathbf{k}} - \epsilon_{m\mathbf{k+q}} + \hbar\omega + i\eta}
-]
+$$
 
 * Spin degeneracy factor **2** included.
-* (\eta) is a small broadening (eV).
-* (V) is **volume** in 3D or **area** in 2D.
+* $\eta$ is a small broadening (eV).
+* $V$ is **volume** in 3D or **area** in 2D.
 
 ### EF-JDOS / nesting function
 
-[
+$$
 \xi(\mathbf{q}) \propto \sum_{\mathbf{k},n,m}
 w(\epsilon_{n\mathbf{k}}-\mu),w(\mu-\epsilon_{m\mathbf{k+q}})
-]
-where (w(\cdot)) is a **window** around (\mu) (Fermi level), chosen as:
+$$
+where $w(\cdot)$ is a **window** around $\mu$ (Fermi level), chosen as:
 
-* **Gaussian** with width (\sigma\sim\eta), or
-* **Thermal** (-\partial f/\partial E) at ((\mu,T)) with `--jdos_thermal`.
+* **Gaussian** with width $\sigma\sim\eta$, or
+* **Thermal** $-\partial f/\partial E$ at $(\mu,T)$ with `--jdos_thermal`.
 
 ---
 
@@ -601,7 +601,7 @@ MIT (see [LICENSE](LICENSE))
 
 * Community tools and literature on CDWs and electron response.
 * [ASE](https://wiki.fysik.dtu.dk/ase/) for structure I/O.
-* U.S. Department of Energy (DOE-XXXX)
+* U.S. Department of Energy, Office of Science, Basic Energy Sciences, under award DE-SC0024099 (code development) and the U.S. National Science Foundation award NSF DMR-2202101 (modeling instabilities).
 
 ---
 
