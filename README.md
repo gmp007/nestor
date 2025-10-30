@@ -76,7 +76,7 @@ $$
 $$
 
 * **Prefactor & sign:** the code uses $-e^2/V_d$, where $V_d$ is **area** (2D) or **volume** (3D).
-* **Spin:** the code **sums over spin** $s$. There is **no fixed factor 2**; non-spin-polarized cases effectively yield a factor $\approx$2 via the spin sum.
+* **Spin:** the code **sums over spin** $s$. There is **no fixed factor 2**; non-spin-polarized cases effectively yield a factor $\approx 2$ via the spin sum.
 * **Occupations $f$:** from file **or** Fermi–Dirac $f(\varepsilon;\mu,T)$ using the global $E_F$ and $T$.
 * **Broadening:** $\eta$ is a small positive broadening (in eV); $\omega=0$ gives the **static** limit.
 * **Form-factor (optional):** if enabled, the plane-wave matrix element
