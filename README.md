@@ -1,9 +1,8 @@
 # 🌀 NESTOR: Nesting & Electronic Susceptibility Toolkit for Ordered Responses
 
-[[GitHub](https://github.com/gmp007/nestor)](https://github.com/gmp007/nestor)
 
 **NESTOR** is a unified, Python-based framework for computing and analyzing the **electronic susceptibility** (Lindhard χ) and **Fermi-surface nesting** functions (EF-JDOS) in crystalline materials.  
-It bridges **first-principles DFT data** from **VASP** and **Quantum ESPRESSO (QE)** to reveal charge-density-wave (CDW), spin-density-wave (SDW), and van-Hove–related instabilities.
+It bridges **first-principles DFT data** from electronic structure codes such as **VASP** and **Quantum ESPRESSO (QE)** to reveal charge-density-wave (CDW), spin-density-wave (SDW), and van-Hove–related instabilities.
 
 ---
 
