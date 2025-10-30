@@ -32,7 +32,7 @@ The toolkit enables **form-factor-resolved** decomposition (TOTAL / INTRA / INTE
 * [Theory (short)](#theory-short)
 * [Supported DFT inputs: VASP & QE](#supported-dft-inputs-vasp--qe)
 * [Installation](#installation)
-* [Key Commands](#keycommands)
+* [Key Commands](#key-commands)
 * [Quick start](#quick-start)
 * [CLI reference](#cli-reference)
 * [Input file (`lindhard.inp`)](#input-file-lindhardinp)
@@ -45,6 +45,8 @@ The toolkit enables **form-factor-resolved** decomposition (TOTAL / INTRA / INTE
 * [Citation](#citation)
 * [Authors](#authors)
 * [License](#license)
+* [Acknowledgments](Acknowledgments)
+* [Further reading](further-reading)
 
 ---
 
@@ -67,24 +69,37 @@ The toolkit enables **form-factor-resolved** decomposition (TOTAL / INTRA / INTE
 ### Lindhard susceptibility
 
 $$
-\chi(\mathbf{q},\omega) = \frac{2}{V}\sum_{\mathbf{k},n,m}
-\frac{f_{n\mathbf{k}}-f_{m\mathbf{k+q}}}{\epsilon_{n\mathbf{k}} - \epsilon_{m\mathbf{k+q}} + \hbar\omega + i\eta}
+\chi(\mathbf{q},\omega)
+= -\frac{e^{2}}{V_d}\sum_{\mathbf{k},n,m}\sum_{s}
+\frac{f_{n\mathbf{k}s}-f_{m,\mathbf{k}+\mathbf{q},s}}
+{\varepsilon_{n\mathbf{k}s}-\varepsilon_{m,\mathbf{k}+\mathbf{q},s}+\hbar\omega+i\eta}
+\big| \langle \psi_{n\mathbf{k}s} | e^{i\mathbf{q}\cdot\mathbf{r}} | \psi_{m,\mathbf{k}+\mathbf{q},s}\rangle \big|^{2}_{\text{(optional)}}
 $$
 
-* Spin degeneracy factor **2** included.
-* $\eta$ is a small broadening (eV).
-* $V$ is **volume** in 3D or **area** in 2D.
+* **Prefactor & sign:** the code uses $-e^2/V_d$, where $V_d$ is **area** (2D) or **volume** (3D).
+* **Spin:** the code **sums over spin** $s$. There is **no fixed factor 2**; non-spin-polarized cases effectively yield a factor $\approx$2 via the spin sum.
+* **Occupations $f$:** from file **or** Fermi–Dirac $f(\varepsilon;\mu,T)$ using the global $E_F$ and $T$.
+* **Broadening:** $\eta$ is a small positive broadening (in eV); $\omega=0$ gives the **static** limit.
+* **Form-factor (optional):** if enabled, the plane-wave matrix element
+  $|\langle \psi|e^{i\mathbf{q}\cdot\mathbf{r}}|\psi\rangle|^{2}$ is included; otherwise it is effectively set to 1.
 
 ### EF-JDOS / nesting function
 
 $$
-\xi(\mathbf{q}) \propto \sum_{\mathbf{k},n,m}
-w(\epsilon_{n\mathbf{k}}-\mu),w(\mu-\epsilon_{m\mathbf{k+q}})
+\xi(\mathbf{q})
+\propto
+\sum_{\mathbf{k},n,m}
+\omega\big(\varepsilon_{n\mathbf{k}}-\mu\big)\;
+\omega\big(\mu-\varepsilon_{m,\mathbf{k}+\mathbf{q}}\big)
+\Big[ \big|\langle \psi_{n\mathbf{k}}|e^{i\mathbf{q}\cdot\mathbf{r}}|\psi_{m,\mathbf{k}+\mathbf{q}}\rangle\big|^{2}\Big]_{\text{(optional)}}
 $$
-where $w(\cdot)$ is a **window** around $\mu$ (Fermi level), chosen as:
 
-* **Gaussian** with width $\sigma\sim\eta$, or
-* **Thermal** $-\partial f/\partial E$ at $(\mu,T)$ with `--jdos_thermal`.
+with window choices:
+* **Thermal:** $\omega(E)= -\partial f/\partial E$ at $(\mu,T)$ (enabled via `--jdos_thermal`).
+* **Gaussian:** $\omega(E)=\exp[-E^{2}/(2\sigma^{2})]$ with $\sigma \sim \eta$ (tunable).
+* **Constant-energy JDOS:** the code also supports $E=\mu+\Delta$ slices (e.g., $\Delta=0,\pm$ meV).
+
+*Notes:* $\mu$ is the Fermi level; optional overlap weighting uses the same plane-wave matrix element as in $\chi$. Normalization constants are handled internally for plotting/export.
 
 ---
 
@@ -110,26 +125,12 @@ Run a **dense NSCF** to produce `EIGENVAL` (and `WAVECAR` if form factors are re
 
 Pass the QE **prefix** via `--wavefxn si` to refer to `si.save/` (do **not** include `.save`). If omitted, the first `*.save/` in the working directory is used.
 
+
 ---
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## ⚙️ Installation
+## ⚙️ Installation <a name="installation"></a>
 
 Install **NESTOR** directly from PyPI — all dependencies are installed automatically.
 
@@ -153,7 +154,7 @@ pip install -e .
 
 ---
 
-## Key Commands
+## Key Commands 
 
 🧩 **Key Command-Line Options**
 
@@ -578,7 +579,7 @@ nestor --input_file lindhard.inp --num_qpoints 96 --eta 0.03
 ---
 
 
-## 📖 Citation
+## 📖 Citation <a name="citation"></a>
 
 If you use **NESTOR** in your research, please **acknowledge and cite** the software as:
 
@@ -602,7 +603,7 @@ You may also cite the repository directly:
 
 ---
 
-## 👨‍💻 Authors and Contributors
+## 👨‍💻 Authors and Contributors <a name="authors"></a>
 
 **Chinedu Ekuma** — Department of Physics, Lehigh University, Bethlehem PA, USA  
 📧 cekuma1@gmail.com  |  che218@lehigh.edu  
