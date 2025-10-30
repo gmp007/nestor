@@ -112,8 +112,6 @@ Pass the QE **prefix** via `--wavefxn si` to refer to `si.save/` (do **not** inc
 
 
 ---
----
-
 ## Theory (short)
 
 ### Lindhard susceptibility
@@ -150,9 +148,7 @@ with window choices:
 * **Constant-energy JDOS:** the code also supports \(E=\mu+\Delta\) slices (e.g., \(\Delta=0,\pm\)meV).
 
 *Notes:* \(\mu\) is the Fermi level; optional overlap weighting uses the same plane-wave matrix element as in \(\chi\). Normalization constants are handled internally for plotting/export.
-
-
-
+---
 
 
 
