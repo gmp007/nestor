@@ -136,7 +136,7 @@ Install **NESTOR** directly from PyPI — all dependencies are installed automat
 ### Recommended
 
 ```bash
-pip install -U nestor
+pip install -U nestors
 
 ```
 
@@ -240,7 +240,7 @@ nestor \
 
 ## CLI reference
 
-> Run `python nestor -h` for the up-to-date help.
+> Run `python nestors -h` for the up-to-date help.
 
 ### Core I/O & code selection
 
@@ -479,7 +479,7 @@ All files are prefixed by `--output_prefix` (default: `lindhard`).
 ### 1) VASP, static (\chi) with smart window
 
 ```bash
-python nestor \
+ nestor \
   --code VASP \
   --eigenval EIGENVAL \
   --dim 2 \
