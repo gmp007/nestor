@@ -14,7 +14,7 @@ The toolkit enables **form-factor-resolved** decomposition (TOTAL / INTRA / INTE
 
 ### Core Capabilities
 
-- 🧩 Compute both **static** (`χ(q, 0)`) and **dynamic** (`χ(q, ω)`) susceptibilities on uniform 2D/3D **q-grids**, with **finite-T** smearing and **η-broadening**.
+- 🧩 Compute both **static** (`χ(q, 0)`) and **dynamic** (`χ(q, ω → 0)`) susceptibilities on uniform 2D/3D **q-grids**, with **finite-T** smearing and **η-broadening**.
 - ⚛️ Include **band-resolved form factors**  
   \(|⟨ψ_{k+q}| e^{i q·r} |ψ_k⟩|²\) from **VASP (WAVECAR)** or **QE (wfc*.dat)** with INTRA/INTER separation
 - 🧮 Extract χ(q) along **high-symmetry paths**
@@ -125,33 +125,39 @@ pip install -U nestor
 ```
 
 ### From source (development mode)
-git clone https://github.com/<your-org-or-username>/NESTOR.git
+
+```bash
+git clone https://github.com/<your-org-or-username>/nestor.git
 cd NESTOR
 python -m venv .venv
 source .venv/bin/activate     # Windows: .venv\Scripts\activate
 pip install -e .
+```
 
 
 ---
 
 ## Key Commands
 
-🧩 Key Command-Line Options
-Flag	Description
---code {VASP,QE}	Select DFT code conventions
---wavefxn / --prefix	Path to VASP WAVECAR or QE prefix (prefix.save/)
---include_ff	Enable form factors and INTRA/INTER decomposition
---eta EV	Small positive broadening in eV
---temperature K	Finite temperature in Kelving
---num-q N	q-grid size per axis (q ∈ [−0.5, 0.5])
---path "Γ,M,K,Γ"	High-symmetry path (fractional coordinates)
---saddlepoint	Compare μ = E_F vs μ = E_F + Δ
---delta-ef EV	Chemical-potential shift (eV)
---ev_window EV	Band window around E_F for wavefunction reads
---plot-2d/--plot-3d	Produce contour/surface plots
---peaks {blend,mask,none}	Visualization mode for Re[χ]
---nprocs N	Number of worker processes
---template  Generate key inputs for run initialization
+🧩 **Key Command-Line Options**
+
+| Flag | Description |
+|------|--------------|
+| `--code {VASP,QE}` | Select DFT code conventions |
+| `--wavefxn` / `--prefix` | Path to VASP `WAVECAR` or QE `prefix.save/` |
+| `--include_ff` | Enable form factors and INTRA/INTER decomposition |
+| `--eta EV` | Small positive broadening in eV |
+| `--temperature K` | Finite temperature in Kelvin |
+| `--num-q N` | q-grid size per axis (q ∈ [−0.5, 0.5]) |
+| `--path "Γ,M,K,Γ"` | High-symmetry path (fractional coordinates) |
+| `--saddlepoint` | Compare μ = E_F vs μ = E_F + Δ |
+| `--delta-ef EV` | Chemical-potential shift (eV) |
+| `--ev_window EV` | Band window around E_F for wavefunction reads |
+| `--plot-2d` / `--plot-3d` | Produce contour/surface plots |
+| `--peaks {blend,mask,none}` | Visualization mode for Re[χ] |
+| `--nprocs N` | Number of worker processes |
+| `--template` | Generate key inputs for run initialization |
+
 
 ---
 
